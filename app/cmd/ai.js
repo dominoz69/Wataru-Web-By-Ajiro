@@ -2,11 +2,11 @@ const axios = require('axios');
 
 exports.meta = {
   name: "ai",
-  aliases: ["chatgpt", "openai"],
+  aliases: ["mistral", "le chat"],
   prefix: "both",
   version: "1.0.0",
-  author: "Kaiz API",
-  description: "Ask chatGPT-4", // fixed typo from "4o" to "4"
+  author: "My API",
+  description: "Ask Le chat ai.", // fixed typo from "4o" to "4"
   guide: ["<query>"],
   category: "ai"
 };
@@ -19,7 +19,7 @@ exports.onStart = async function({ wataru, msg, chatId, args }) {
     }
 
     // Build the API URL with the user's question.
-    const apiUrl = `${global.api.kaiz}/api/gpt-4o?ask=${encodeURIComponent(question)}&uid=${chatId}&webSearch=off`;
+    const apiUrl = `${global.api.main}/api/mixtral-8x7b?prompt=${encodeURIComponent(question)}&uid=${chatId}`;
     const response = await axios.get(apiUrl);
 
     // Use optional chaining to safely access the API response.
