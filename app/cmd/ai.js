@@ -19,7 +19,7 @@ exports.onStart = async function({ wataru, msg, chatId, args }) {
     }
 
     // Build the API URL with the user's question.
-    const apiUrl = `${global.api.main}/api/mixtral-8x7b?prompt=${encodeURIComponent(question)}&uid=${chatId}`;
+    const apiUrl = `https://daiki.gleeze.com/api/gpt4o-mini?prompt=${encodeURIComponent(question)}&uid=${chatId}`;
     const response = await axios.get(apiUrl);
 
     // Use optional chaining to safely access the API response.
