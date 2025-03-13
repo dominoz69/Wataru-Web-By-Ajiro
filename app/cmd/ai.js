@@ -23,7 +23,7 @@ exports.onStart = async function({ wataru, msg, chatId, args }) {
     const response = await axios.get(apiUrl);
 
     // Use optional chaining to safely access the API response.
-    const aiResponse = response.data?.response || "No response was returned from the API.";
+    const aiResponse = response.data.response || "No response was returned from the API.";
 
     await wataru.reply(aiResponse);
   } catch (error) {
