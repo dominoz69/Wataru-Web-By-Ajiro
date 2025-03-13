@@ -1,5 +1,7 @@
 {
   "kaiz": "https://kaiz-apis.gleeze.com",
   "ryzen": "https://api.ryzen.vip",
-  "zaik": "https://zaikyoo-api.onrender.com"
+  "zaik": "https://zaikyoo-api.onrender.com",
+  "main": "daiki.gleeze.com",
+  "mainv2": "api.shizuki.linkpc.net"
 }
