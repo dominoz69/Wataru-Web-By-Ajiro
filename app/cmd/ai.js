@@ -2,11 +2,11 @@ const axios = require('axios');
 
 exports.meta = {
   name: "ai",
-  aliases: ["mistral", "le chat"],
+  aliases: ["bot", "gpt"],
   prefix: "both",
   version: "1.0.0",
   author: "My API",
-  description: "Ask Le chat ai.", // fixed typo from "4o" to "4"
+  description: "Ask with ai.",
   guide: ["<query>"],
   category: "ai"
 };
